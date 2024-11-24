@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import requests
 
 app = Flask(__name__)
+CORS(app)
 
 # Hugging Face API endpoint and headers
 API_URL = "https://api-inference.huggingface.co/models/nateraw/food"
